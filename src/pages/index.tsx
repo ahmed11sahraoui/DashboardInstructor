@@ -1,9 +1,25 @@
-import Auth from '@/components/Shared/Auth/Auth';
+// Home.js
+import React, { useState } from 'react';
+import NavBar from '@/components/Layout/NavBar';
+import SideBar from '@/components/Layout/SideBar';
+import ExerciceGetAll from '@/components/Shared/Exercice/exerciceGetAll';
 
 export default function Home() {
+  const [showExercice, setShowExercice] = useState(false);
+
+  const toggleExercice = () => {
+    setShowExercice(!showExercice);
+  };
+
   return (
-    <div className="flex w-100 justify-center items-center">
-      <Auth></Auth>
+    <div className="flex flex-col h-screen">
+      <NavBar />
+      <div className="flex flex-1">
+        <SideBar onExerciceClick={toggleExercice} />
+        <div className="flex flex-grow justify-center items-center">
+          {showExercice && <ExerciceGetAll />}
+        </div>
+      </div>
     </div>
   );
 }

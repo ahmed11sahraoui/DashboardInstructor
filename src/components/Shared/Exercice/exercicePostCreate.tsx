@@ -394,13 +394,16 @@ export default function ExercicePostCreate() {
         />
         <label htmlFor="isLocked">Is Locked</label>
 
-        {/* Render type-specific input fields */}
+        
         {generateInput_First_9(selectedType)}
         {generateInput_QCM_MULTI_ANSWER_IMAGES(selectedType)}
         {generateInput_QCM_MULTI_ANSWER_WORDS_IMAGES(selectedType)}
         {generateInput_DRAG_DROP_IN_TABLE_IMAGES(selectedType)}
 
-        <button onClick={handleNbrClick}>Add Input</button>
+        <button
+         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+         onClick={handleNbrClick}>Add Input
+         </button>
         {ShowInputsDRAG_DROP_IN_TABLE_IMAGES()}
       </form>
     </div>

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getAll from '@/services/Functions/Exercice/getAll';
+
+
 import { Exercice, ExerciceGetAllResponse } from '@/Dto/ExerciceDto'; // Import Exercice type
 
 export default function ExerciceGetAll() {

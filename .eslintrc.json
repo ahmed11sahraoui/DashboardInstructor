@@ -1,0 +1,16 @@
+{
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "no-unused-vars": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"]
+    }
+  ]
+}
